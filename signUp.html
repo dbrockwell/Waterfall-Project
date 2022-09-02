@@ -3,10 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <title>Corporate Training By CK - Sign Up</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+<div class="d-flex flex-row mb-3 bg-primary p-3 text-white">
+    <h1 class="p-2 w-100">Sign Up</h1>
+    <a href="index.html" class="text-white"><h2 class="p-2 flex-shrink-1"><i class="fa-solid fa-x"></i></h2></a>
+</div>
+<div id="chooseSignUp" class="position-absolute top-50 start-50 translate-middle" style="display: block;">
+    <button id="studentClick" type="button" class="btn btn-primary p-2 m-2" style="height: 400px; width:400px;"
+            onclick="studentFunction()">
+        <h1><i class="fa-solid fa-user"></i></h1>
+        <h2>Sign up as student</h2>
+    </button>
+    <button type="button" class="btn btn-primary p-2 m-2" style="height: 400px; width:400px;"
+            onclick="companyFunction()">
+        <h1><i class="fa-solid fa-building-user"></i></h1>
+        <h2>Sign up as company</h2>
+    </button>
+</div>
+<div id="studentSignUp" class="bg-light w-50 p-5 position-absolute top-20 start-50 translate-middle-x"
+     style="display: none">
+    <button type="button" class="btn btn-primary m-4" onclick="studentFunction()"><i class="fa-solid fa-arrow-left"></i>
+        Back
+    </button>
+    <h2>Student</h2>
+    <form>
+        <div class="mb-3 m-4">
+            <label for="InputName1" class="form-label">Name</label>
+            <input type="email" class="form-control" id="InputName1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputUsername1" class="form-label">Username</label>
+            <input type="email" class="form-control" id="InputUsername1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="InputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary m-4">Sign Up</button>
+    </form>
+</div>
+<div id="companySignUp" class="bg-light w-50 p-5 position-absolute top-20 start-50 translate-middle-x"
+     style="display: none">
+    <button type="button" class="btn btn-primary m-4" onclick="companyFunction()"><i class="fa-solid fa-arrow-left"></i>
+        Back
+    </button>
+    <h2>Company</h2>
+    <form>
+        <div class="mb-3 m-4">
+            <label for="InputName2" class="form-label">Company Name</label>
+            <input type="email" class="form-control" id="InputName2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputIndustry2" class="form-label">Industry</label>
+            <input type="email" class="form-control" id="InputIndustry2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputContact2" class="form-label">Contact Name</label>
+            <input type="email" class="form-control" id="InputContact2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputEmail2" class="form-label">Contact Email</label>
+            <input type="email" class="form-control" id="InputEmail2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputPhone2" class="form-label">Contact Phone</label>
+            <input type="email" class="form-control" id="InputPhone2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputAddress2" class="form-label">Company Address</label>
+            <input type="email" class="form-control" id="InputAddress2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputUsername2" class="form-label">Username</label>
+            <input type="email" class="form-control" id="InputUsername2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 m-4">
+            <label for="InputPassword2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="InputPassword2">
+        </div>
+        <button type="submit" class="btn btn-primary m-4">Sign Up</button>
+    </form>
+</div>
+<script>
+    function studentFunction() {
+        var student = document.getElementById("studentSignUp");
+        var choose = document.getElementById("chooseSignUp");
+        if (student.style.display === "none") {
+            student.style.display = "block";
+            choose.style.display = "none";
+        } else {
+            student.style.display = "none";
+            choose.style.display = "block";
+        }
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    function companyFunction() {
+        var company = document.getElementById("companySignUp");
+        var choose = document.getElementById("chooseSignUp");
+        if (company.style.display === "none") {
+            company.style.display = "block";
+            choose.style.display = "none";
+        } else {
+            company.style.display = "none";
+            choose.style.display = "block";
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
