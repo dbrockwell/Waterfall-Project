@@ -1,0 +1,8 @@
+//override variable
+$primary: orange;
+
+@import 'bootstrap';
+
+.dropdown-menu.show {
+  width: 300px;
+}
