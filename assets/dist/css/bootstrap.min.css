@@ -10762,7 +10762,7 @@ textarea.form-control-lg {
   width: 300px;
 }
 
-.drop-plus::after {
+.dropdown-toggle::after {
   content: none;
 }
 
