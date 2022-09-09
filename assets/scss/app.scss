@@ -6,3 +6,7 @@ $primary: orange;
 .dropdown-menu.show {
   width: 300px;
 }
+
+.drop-plus::after {
+  content: none;
+}

@@ -28,7 +28,8 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                             <form class="d-flex position-absolute end-0 m-4" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn btn-outline-primary" type="submit"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </div>
                     </div>
@@ -222,15 +223,38 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Employees</a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent3">
-                        <button type="button" class="btn position-absolute end-0 m-4"><i class="fa-solid fa-circle-plus text-success"></i></button>
+                        <div class="dropdown">
+                            <button type="button" class="btn dropdown-toggle drop-plus" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <i class="fa-solid fa-circle-plus text-success"></i>
+                            </button>
+                            <form class="dropdown-menu p-4">
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormName2" class="form-label">Name</label>
+                                    <input type="email" class="form-control" id="exampleDropdownFormName2" placeholder="Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormUsername2" class="form-label">Username</label>
+                                    <input type="email" class="form-control" id="exampleDropdownFormUsername2" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1 <i class="fa-solid fa-trash-can float-end text-danger"></i></li>
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2 <i class="fa-solid fa-trash-can float-end text-danger"></i></li>
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3 <i class="fa-solid fa-trash-can float-end text-danger"></i></li>
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4 <i class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1 <i
+                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2 <i
+                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3 <i
+                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4 <i
+                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
             </ul>
         </div>
     </div>

@@ -10762,4 +10762,8 @@ textarea.form-control-lg {
   width: 300px;
 }
 
+.drop-plus::after {
+  content: none;
+}
+
 /*# sourceMappingURL=bootstrap.min.css.map */
