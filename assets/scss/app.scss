@@ -10,3 +10,7 @@ $primary: orange;
 .dropdown-toggle::after {
   content: none;
 }
+
+.card-nav{
+  z-index: 9;
+}

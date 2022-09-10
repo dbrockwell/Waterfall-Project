@@ -10766,4 +10766,8 @@ textarea.form-control-lg {
   content: none;
 }
 
+.card-nav {
+  z-index: 9;
+}
+
 /*# sourceMappingURL=bootstrap.min.css.map */
