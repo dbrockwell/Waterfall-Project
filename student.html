@@ -49,7 +49,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Class Name</h5>
                                 <p class="card-text">Class Description</p>
-                                <p class="card-text">Lecturer: _____</p>
+                                <p class="card-text">Lecturer: _____ &nbsp; <span class="text-info"><i
+                                        class="fa-regular fa-message"></i> chat</span></p>
                                 <p class="card-text">Cost: $___</p>
                                 <p class="card-text">Start/End Date: __/__/____ - __/__/____</p>
                                 <p class="card-text">Location: ______</p>
@@ -76,7 +77,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Class Name</h5>
                                 <p class="card-text">Class Description</p>
-                                <p class="card-text">Lecturer: _____</p>
+                                <p class="card-text">Lecturer: _____ &nbsp; <span class="text-info"><i
+                                        class="fa-regular fa-message"></i> chat</span></p>
                                 <p class="card-text">Cost: $___</p>
                                 <p class="card-text">Start/End Date: __/__/____ - __/__/____</p>
                                 <p class="card-text">Location: ______</p>
@@ -103,13 +105,15 @@
                             <div class="card-body">
                                 <h5 class="card-title">Class Name</h5>
                                 <p class="card-text">Class Description</p>
-                                <p class="card-text">Lecturer: _____</p>
+                                <p class="card-text">Lecturer: _____ &nbsp; <span class="text-info"><i
+                                        class="fa-regular fa-message"></i> chat</span></p>
                                 <p class="card-text">Cost: $___</p>
                                 <p class="card-text">Start/End Date: __/__/____ - __/__/____</p>
                                 <p class="card-text">Location: ______</p>
                                 <p class="card-text">Time: __:__ AM/PM - __:__ AM/PM _______(day of week)</p>
                                 <span class="d-inline-block float-end m-4" tabindex="0" data-bs-toggle="popover"
-                                      data-bs-trigger="hover focus" data-bs-content="Your employer signed you up for this class">
+                                      data-bs-trigger="hover focus"
+                                      data-bs-content="Your employer signed you up for this class">
                                   <button class="btn btn-primary" type="button" disabled>Register</button>
                                 </span>
                             </div>
@@ -131,7 +135,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Class Name</h5>
                                 <p class="card-text">Class Description</p>
-                                <p class="card-text">Lecturer: _____</p>
+                                <p class="card-text">Lecturer: _____ &nbsp; <span class="text-info"><i
+                                        class="fa-regular fa-message"></i> chat</span></p>
                                 <p class="card-text">Cost: $___</p>
                                 <p class="card-text">Start/End Date: __/__/____ - __/__/____</p>
                                 <p class="card-text">Location: ______</p>
@@ -158,7 +163,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Class Name</h5>
                                 <p class="card-text">Class Description</p>
-                                <p class="card-text">Lecturer: _____</p>
+                                <p class="card-text">Lecturer: _____ &nbsp; <span class="text-info"><i
+                                        class="fa-regular fa-message"></i> chat</span></p>
                                 <p class="card-text">Cost: $___</p>
                                 <p class="card-text">Start/End Date: __/__/____ - __/__/____</p>
                                 <p class="card-text">Location: ______</p>
@@ -181,21 +187,36 @@
                 </div>
             </nav>
             <div class="p-4">
-            <p class="card-text">Classes Taken: ___</p>
-            <p class="card-text">Classes Passed: ___</p>
-            <p class="card-text">Company: &nbsp; <div class="dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                    Enter Company
-                </button>
-                <form class="dropdown-menu p-4">
-                    <div class="mb-3">
-                        <label for="exampleDropdownFormCompanyName2" class="form-label">Company Name</label>
-                        <input class="form-control" id="exampleDropdownFormCompanyName2" placeholder="Company Name">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Find</button>
-                </form>
-            </div></p>
+                <p class="card-text">Classes Taken: ___</p>
+                <p class="card-text">Classes Passed: ___</p>
+                <p class="card-text">Company: &nbsp;
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                        Enter Company
+                    </button>
+                    <form class="dropdown-menu p-4">
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormCompanyName2" class="form-label">Company Name</label>
+                            <input class="form-control" id="exampleDropdownFormCompanyName2" placeholder="Company Name">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Find</button>
+                    </form>
+                </div>
+                </p>
             </div>
+        </div>
+        <div class="card position-absolute bottom-0 end-0 m-5" style="width: 20%;">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">To: </span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                               aria-describedby="To-who-chat">
+                    </div>
+                </div>
+            </nav>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
         </div>
     </div>
 </div>
