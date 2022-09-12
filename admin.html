@@ -25,7 +25,7 @@
                 <nav class="navbar navbar-expand-lg bg-light position-sticky top-0 start-0 card-nav">
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="checkOutTab" role="tablist">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="courses-classes-tabs" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="classes-tab" data-bs-toggle="tab"
                                        data-bs-target="#classes"
@@ -377,16 +377,20 @@
                                 <label for="exampleInputCost" class="form-label">Cost of Course</label>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">$</span>
-                                    <input type="number" step="0.01" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" id="exampleInputCost">
+                                    <input type="number" step="0.01" class="form-control"
+                                           aria-label="Dollar amount (with dot and two decimal places)"
+                                           id="exampleInputCost">
                                 </div>
                                 <label for="exampleInputLength" class="form-label">Length of Course</label>
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control" aria-label="Number of Weeks" id="exampleInputLength" min="1">
+                                    <input type="number" class="form-control" aria-label="Number of Weeks"
+                                           id="exampleInputLength" min="1">
                                     <span class="input-group-text">Weeks</span>
                                 </div>
                                 <label for="exampleInputTime" class="form-label">Hours Per Week</label>
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control" aria-label="Number of Hours" id="exampleInputTime" min="1">
+                                    <input type="number" class="form-control" aria-label="Number of Hours"
+                                           id="exampleInputTime" min="1">
                                     <span class="input-group-text">Hours</span>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Create</button>
@@ -398,47 +402,450 @@
         </div>
     </div>
     <div class="col">
-        <div class="card float-end" style="width: 60%;">
-            <nav class="navbar navbar-expand-lg bg-light">
+        <div class="card float-end overflow-auto" style="width: 60%; max-height: 500px">
+            <nav class="navbar navbar-expand-lg bg-light position-sticky top-0 start-0 card-nav">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Employees</a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent3">
-                        <div class="dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                    aria-expanded="false" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-circle-plus text-success"></i>
-                            </button>
-                            <form class="dropdown-menu p-4">
-                                <div class="mb-3">
-                                    <label for="exampleDropdownFormName2" class="form-label">Name</label>
-                                    <input class="form-control" id="exampleDropdownFormName2" placeholder="Name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleDropdownFormUsername2" class="form-label">Username</label>
-                                    <input class="form-control" id="exampleDropdownFormUsername2"
-                                           placeholder="Username">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2"
-                                           placeholder="Password">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Create</button>
-                            </form>
-                        </div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="management-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="report-tab" data-bs-toggle="tab"
+                                   data-bs-target="#report"
+                                   type="button" role="tab" aria-controls="home" aria-selected="true">Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="trainers-tab" data-bs-toggle="tab"
+                                   data-bs-target="#trainers"
+                                   type="button" role="tab" aria-controls="profile" aria-selected="false">Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="find-tab" data-bs-toggle="tab"
+                                   data-bs-target="#find"
+                                   type="button" role="tab" aria-controls="profile" aria-selected="false">Find
+                                    Account</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1 <i
-                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2 <i
-                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3 <i
-                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
-                <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4 <i
-                        class="fa-solid fa-trash-can float-end text-danger"></i></li>
-            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="report" role="tabpanel" aria-labelledby="overview-tab"
+                     tabindex="0">
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Report</a>
+                        </div>
+                    </nav>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    &nbsp;
+                                </div>
+                                <div class="col">
+                                    Month
+                                </div>
+                                <div class="col">
+                                    Year
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    Number Of Employees
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    New Student
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    Active Students
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    New Companies
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                                <div class="col">
+                                    ________
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    Total Profit
+                                </div>
+                                <div class="col">
+                                    $_______
+                                </div>
+                                <div class="col">
+                                    $_______
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane" id="trainers" role="tabpanel" aria-labelledby="overview-tab"
+                     tabindex="0">
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Trainers</a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent4">
+                                <div class="dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false" data-bs-auto-close="outside">
+                                        <i class="fa-solid fa-circle-plus text-success"></i>
+                                    </button>
+                                    <form class="dropdown-menu p-4">
+                                        <div class="mb-3">
+                                            <label for="exampleDropdownFormName2" class="form-label">Name</label>
+                                            <input class="form-control" id="exampleDropdownFormName2"
+                                                   placeholder="Name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleDropdownFormUsername2"
+                                                   class="form-label">Username</label>
+                                            <input class="form-control" id="exampleDropdownFormUsername2"
+                                                   placeholder="Username">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleDropdownFormPassword2"
+                                                   class="form-label">Password</label>
+                                            <input type="password" class="form-control"
+                                                   id="exampleDropdownFormPassword2"
+                                                   placeholder="Password">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Create</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 1 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 2 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 3 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 4 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 5 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 6 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 7 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 8 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 9 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 10 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 11 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                        <li class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> &nbsp; Trainer 12 <i
+                                class="fa-solid fa-trash-can float-end text-danger"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane" id="find" role="tabpanel" aria-labelledby="overview-tab"
+                     tabindex="0">
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Trainers</a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent5">
+                                <form class="d-flex position-absolute end-0 m-4" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                           aria-label="Search">
+                                    <button class="btn btn-outline-primary" type="submit"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Student 1</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseStudent1" aria-expanded="false"
+                                            aria-controls="collapseStudent1">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseStudent1">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Company Name: ________</p>
+                                    <p>Classes Taken: ________</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Student 2</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseStudent2" aria-expanded="false"
+                                            aria-controls="collapseStudent2">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseStudent2">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Company Name: ________</p>
+                                    <p>Classes Taken: ________</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Student 3</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseStudent3" aria-expanded="false"
+                                            aria-controls="collapseStudent3">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseStudent3">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Company Name: ________</p>
+                                    <p>Classes Taken: ________</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Student 4</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseStudent4" aria-expanded="false"
+                                            aria-controls="collapseStudent4">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseStudent4">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Company Name: ________</p>
+                                    <p>Classes Taken: ________</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Company 1</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseCompany1" aria-expanded="false"
+                                            aria-controls="collapseCompany1">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseCompany1">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Industry: ________</p>
+                                    <p>Contact Name: ________</p>
+                                    <p>Contact Email: ________</p>
+                                    <p>Contact Phone: ________</p>
+                                    <p>Company Address: ________</p>
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEmployees1" aria-expanded="false"
+                                            aria-controls="collapseEmployees1">
+                                        Employees
+                                    </button>
+                                    <div class="collapse" id="collapseEmployees1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Company 2</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseCompany2" aria-expanded="false"
+                                            aria-controls="collapseCompany2">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseCompany2">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Industry: ________</p>
+                                    <p>Contact Name: ________</p>
+                                    <p>Contact Email: ________</p>
+                                    <p>Contact Phone: ________</p>
+                                    <p>Company Address: ________</p>
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEmployees2" aria-expanded="false"
+                                            aria-controls="collapseEmployees2">
+                                        Employees
+                                    </button>
+                                    <div class="collapse" id="collapseEmployees2">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Company 3</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseCompany3" aria-expanded="false"
+                                            aria-controls="collapseCompany3">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseCompany3">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Industry: ________</p>
+                                    <p>Contact Name: ________</p>
+                                    <p>Contact Email: ________</p>
+                                    <p>Contact Phone: ________</p>
+                                    <p>Company Address: ________</p>
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEmployees3" aria-expanded="false"
+                                            aria-controls="collapseEmployees3">
+                                        Employees
+                                    </button>
+                                    <div class="collapse" id="collapseEmployees3">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-user"></i> Company 4</p>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseCompany4" aria-expanded="false"
+                                            aria-controls="collapseCompany4">
+                                        View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseCompany4">
+                                <div class="card card-body">
+                                    <p>Username: ________</p>
+                                    <p>Industry: ________</p>
+                                    <p>Contact Name: ________</p>
+                                    <p>Contact Email: ________</p>
+                                    <p>Contact Phone: ________</p>
+                                    <p>Company Address: ________</p>
+                                    <button class="btn btn-primary float-end btn-sm" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseEmployees4" aria-expanded="false"
+                                            aria-controls="collapseEmployees4">
+                                        Employees
+                                    </button>
+                                    <div class="collapse" id="collapseEmployees4">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 1</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 2</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 3</li>
+                                            <li class="list-group-item"><i class="fa-solid fa-user"></i> &nbsp; Employee 4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
